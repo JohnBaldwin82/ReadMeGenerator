@@ -14,7 +14,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `
   ## ReadMe
-   ${data.project}
+   ${data.Project}
 
   ## description
   ${data.Description}
@@ -28,7 +28,16 @@ function generateMarkdown(data) {
   ## Contribution Guidelines
   ${data.Contributing}
 
-  
+  ## Tests
+  ${data.Tests}
+
+  ## Emaill Address
+  ${data.Email}
+
+  ## GitHub Username
+  ${data.Username}
+
+
 `;
 }
 

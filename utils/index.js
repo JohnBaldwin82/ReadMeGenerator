@@ -16,23 +16,33 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'installation instructions ',
+        message: 'What are your installation instructions ',
         name: 'Installation'
     },
     {
         type: 'input',
-        message: 'usage information',
+        message: 'What is your usage information',
         name: 'Usage'
     },
     {
         type: 'input',
-        message: 'contribution guidelines',
+        message: 'What are your contribution guidelines',
         name: 'Contributing'
     },
     {
         type: 'input',
-        message: 'tests',
+        message: 'information about running tests',
         name: 'Tests'
+    },
+    {
+        type: 'input',
+        message: 'Whats is your email address?',
+        name: 'Email'
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub username',
+        name: 'Username'
     }
 ];
 

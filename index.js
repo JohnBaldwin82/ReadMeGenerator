@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
-const generateMarkdown = require('./generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 // const { generatePrime } = require('crypto');
 // const generateMarkdown = require('./generateMarkdown');
 // const { filter } = require('rxjs');
@@ -59,21 +59,16 @@ const questions = [
     }
 ];
 
-function writeToFile(filename, data) {
-    fs.writeToFile(filename, data, (err) => {
+function writeToFile(document, data) {
+    let contents = generateMarkdown(data);
+    fs.writeFile(document, contents, function (err) {
         if (err)
-        throw err;
+        return console.log(err)
         console.log('Congratulations! A new ReadMe has been generated')
-    })
+    });
 }
 
-// function init() {
-//     inquirer.prompt(questions)
-//     .then(function (data) {
-//         console.log(data)
-//         writeToFile("README.md", generateMarkdown(data))
-//     }) 
-// }
+
     
 // TODO: Create an array of questions for user input
 
@@ -85,24 +80,10 @@ function writeToFile(filename, data) {
 
 
 function init() {
-    inquirer.prompt(questions)
-    .then((answers) => {
-        const gen = generateMarkdown.generateReadme(answers)
-        fs.writeFile(generateMarkdown, data)
-        // Use user feedback for... whatever!!
-       
-      })
-      .catch((error) => {
-        if (error.isTtyError) {
-            console.log('Could not generate README.md')
-          // Prompt couldn't be rendered in the current environment
-        } else {
-            console.log('Success new README.me Generated')
-          // Something else went wrong
-        }
-      });
-    
+    inquirer.prompt(questions).then(function(data) {
+        let document = 'README.md';
+        writeToFile(document, data)
+    })
 }
-
 // Function call to initialize app
 init();

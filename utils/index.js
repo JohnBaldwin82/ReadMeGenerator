@@ -2,13 +2,15 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./generateMarkdown');
-const { filter } = require('rxjs');
+// const { generatePrime } = require('crypto');
+// const generateMarkdown = require('./generateMarkdown');
+// const { filter } = require('rxjs');
 
 const questions = [
     {
         type: 'input',
         message: 'what is your project title?',
-        name: 'project'
+        name: 'Project'
     },
     {
         type: 'input',
@@ -34,10 +36,10 @@ const questions = [
         type: 'input',
         Message: 'What License are you using?',
         name: 'License',
-        Choice: ['MIT', 'ISC'],
-        filter(value) {
-            return value.toUpperCase();
-        }
+        // Choice: ['MIT', 'ISC'],
+        // filter(choice) {
+        //     return choice.toUpperCase();
+        // }
     
     },
     {
@@ -57,8 +59,21 @@ const questions = [
     }
 ];
 
-function writeToFile(fileName, data) {}
+function writeToFile(filename, data) {
+    fs.writeToFile(filename, data, (err) => {
+        if (err)
+        throw err;
+        console.log('Congratulations! A new ReadMe has been generated')
+    })
+}
 
+// function init() {
+//     inquirer.prompt(questions)
+//     .then(function (data) {
+//         console.log(data)
+//         writeToFile("README.md", generateMarkdown(data))
+//     }) 
+// }
     
 // TODO: Create an array of questions for user input
 
@@ -67,17 +82,22 @@ function writeToFile(fileName, data) {}
 
 
 // TODO: Create a function to initialize app
+
+
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
+        const gen = generateMarkdown.generateReadme(answers)
+        fs.writeFile(generateMarkdown, data)
         // Use user feedback for... whatever!!
-        console.log(answers)
-        console.log(generateMarkdown(answers))
+       
       })
       .catch((error) => {
         if (error.isTtyError) {
+            console.log('Could not generate README.md')
           // Prompt couldn't be rendered in the current environment
         } else {
+            console.log('Success new README.me Generated')
           // Something else went wrong
         }
       });

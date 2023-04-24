@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
-const generateMarkdown = require('./generateMarkdown')
+const generateMarkdown = require('./generateMarkdown');
+const { filter } = require('rxjs');
 
 const questions = [
     {
@@ -28,6 +29,16 @@ const questions = [
         type: 'input',
         message: 'What are your contribution guidelines',
         name: 'Contributing'
+    },
+    {
+        type: 'input',
+        Message: 'What License are you using?',
+        name: 'License',
+        Choice: ['MIT', 'ISC'],
+        filter(value) {
+            return value.toUpperCase();
+        }
+    
     },
     {
         type: 'input',

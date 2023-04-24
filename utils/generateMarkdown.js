@@ -28,6 +28,9 @@ function generateMarkdown(data) {
   ## Contribution Guidelines
   ${data.Contributing}
 
+  ## Licenses
+  ${data.License}
+
   ## Tests
   ${data.Tests}
 

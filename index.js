@@ -2,14 +2,11 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown');
-// const { generatePrime } = require('crypto');
-// const generateMarkdown = require('./generateMarkdown');
-// const { filter } = require('rxjs');
 
 const questions = [
     {
         type: 'input',
-        message: 'what is your project title?',
+        message: 'What is the name of your project?',
         name: 'Project'
     },
     {
@@ -19,7 +16,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What are your installation instructions ',
+        message: 'What command should be run to install your dependencies?',
         name: 'Installation'
     },
     {
@@ -33,13 +30,14 @@ const questions = [
         name: 'Contributing'
     },
     {
-        type: 'input',
-        Message: 'What License are you using?',
+        type: 'list',
+        message: 'What License are you using?',
         name: 'License',
-        // Choice: ['MIT', 'ISC'],
-        // filter(choice) {
-        //     return choice.toUpperCase();
-        // }
+        choices: [
+            'MIT',
+            'Apache',
+            'none'
+        ]
     
     },
     {

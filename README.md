@@ -1,9 +1,10 @@
- undefined
-  ---
+# ReadMe Generator
+
 
   ## Licensing:
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+ 
   ## Table of Contents
   - [Project Description](#Description)
   - [Installation Guidelines](#Installation)
@@ -14,31 +15,30 @@
   - [Email Address](#Email)
   - [GitHub Username](#Username)
 
-  ## ReadMe:
-   f
+ 
 
   ## description:
-  f
+  to produce a readme generator
 
   ## Installation Guidelines:
-  f
+  i npm "dependencies"
 
   ## Usage Information:
-  f
+  usage
 
   ## Contribution Guidelines:
-  f
+  contributors
 
   ## Licenses:
-  f
+  MIT License.
 
   ## Tests:
-  f
+  n/a
 
   ## Emaill Address:
-  f
+  d
 
   ## GitHub Username:
-  f
+  d
 
 

@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   ${data.License} License.
 
   ## Tests:
-  ${data.Tests}
+  ${data.Tests} , "Error: no test specified
 
   ## Emaill Address:
   ${data.Email}

@@ -18,27 +18,27 @@
  
 
   ## description:
-  to produce a readme generator
+  Creating a professional ReadMe file to include a Titel, Instalation guidelines, Usage information, Contribution guidelines, Licenses, Tests and the Users email link with GitHub profile Link
 
   ## Installation Guidelines:
-  i npm "dependencies"
+  run npm i to install the dependencies
 
   ## Usage Information:
-  usage
+  Enter in your input to help create a professional ReadMe
 
   ## Contribution Guidelines:
-  contributors
+  Please click on my GitHub link to help contribute.
 
   ## Licenses:
   MIT License.
 
   ## Tests:
-  n/a
+  yes , "Error: no test specified
 
   ## Emaill Address:
-  d
+  johnbaldwin82@gmail.com
 
   ## GitHub Username:
-  d
+   https://github.com/JohnBaldwin82
 
 

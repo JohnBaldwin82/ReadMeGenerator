@@ -21,12 +21,12 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What is your usage information',
+        message: 'What is your usage information?',
         name: 'Usage'
     },
     {
         type: 'input',
-        message: 'What are your contribution guidelines',
+        message: 'What are your contribution guidelines?',
         name: 'Contributing'
     },
     {

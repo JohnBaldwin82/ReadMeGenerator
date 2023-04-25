@@ -43,7 +43,7 @@
 
 [Untitled_ Apr 24, 2023 9_41 PM.webm](https://user-images.githubusercontent.com/124854286/234169233-12055dd8-baaf-476e-96e0-ef3b5197f242.webm)
 
-git@github.com:JohnBaldwin82/ReadMeGenerator.git
+https://github.com/JohnBaldwin82/ReadMeGenerator
 
 
 ![ReadMe Generator](https://user-images.githubusercontent.com/124854286/234169328-61a2b58d-0627-4e80-b93c-afcad6709188.png)
